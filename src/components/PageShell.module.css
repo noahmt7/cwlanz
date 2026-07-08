@@ -32,6 +32,10 @@
   max-width: 70ch;
 }
 
+.body.wide {
+  max-width: none;
+}
+
 .placeholder {
   color: var(--cwl-muted);
 }

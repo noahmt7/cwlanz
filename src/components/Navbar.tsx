@@ -55,6 +55,17 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Communities", href: "/missions/communities" },
     ],
   },
+  {
+    label: "Quick Links",
+    href: "#",
+    children: [
+      { label: "Why Become a Member", href: "/inspire/why-become-a-member" },
+      { label: "What's Your CWL", href: "/whats-your-cwl" },
+      { label: "National Conference 2027", href: "/national-conference-2027" },
+      { label: "Join", href: "/join" },
+      { label: "Māori Resources", href: "/maori-resources" },
+    ],
+  },
   { label: "Contact Us", href: "/contact" },
 ];
 

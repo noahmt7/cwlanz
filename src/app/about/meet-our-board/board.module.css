@@ -1,0 +1,71 @@
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+  max-width: none;
+}
+
+.section {
+  width: 100%;
+}
+
+.sectionHeading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--cwl-navy);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--cwl-gold);
+}
+
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  text-align: center;
+}
+
+.photoWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #eef0f7;
+  box-shadow: 0 6px 18px rgba(19, 31, 82, 0.1);
+}
+
+.photo {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.name {
+  margin-top: 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cwl-ink);
+}
+
+.role {
+  font-size: 0.9rem;
+  color: var(--cwl-muted);
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}

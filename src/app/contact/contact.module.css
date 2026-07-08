@@ -1,0 +1,59 @@
+.intro {
+  font-size: 1.05rem;
+  color: var(--cwl-muted);
+  margin-bottom: 2rem;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.emailField {
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cwl-gold);
+}
+
+.email {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--cwl-navy);
+  transition: color 0.15s ease;
+}
+
+.email:hover {
+  color: var(--cwl-navy-dark);
+  text-decoration: underline;
+}
+
+.facebook {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1877f2;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+
+.facebook:hover {
+  background: #145dc0;
+}
