@@ -1,0 +1,98 @@
+.slideshow {
+  position: relative;
+  width: 100%;
+  /* Matches the wide banner aspect ratio of the source artwork (~2.5:1) */
+  aspect-ratio: 5 / 2;
+  max-height: 620px;
+  overflow: hidden;
+  background: #eef0f7;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Arrows --- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff;
+  background: rgba(19, 31, 82, 0.35);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.arrow:hover {
+  background: rgba(19, 31, 82, 0.6);
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+/* --- Dots --- */
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s ease;
+}
+
+.dotActive {
+  background: var(--cwl-gold);
+  border-color: var(--cwl-gold);
+}
+
+@media (max-width: 720px) {
+  .slideshow {
+    aspect-ratio: 3 / 2;
+  }
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+}
