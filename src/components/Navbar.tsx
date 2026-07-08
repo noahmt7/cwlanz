@@ -9,39 +9,50 @@ type NavItem = {
 };
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
+  {
+    label: "Home",
+    href: "/",
+    children: [
+      { label: "Welcome", href: "/welcome" },
+      { label: "Calendar", href: "/calendar" },
+    ],
+  },
   {
     label: "Inspire",
     href: "/inspire",
     children: [
-      { label: "Prayer & Reflection", href: "/inspire/prayer" },
-      { label: "Faith Stories", href: "/inspire/stories" },
+      { label: "Members Stories", href: "/inspire/members-stories" },
+      { label: "Why Become a Member", href: "/inspire/why-become-a-member" },
+      { label: "Resources", href: "/inspire/resources" },
     ],
   },
   {
     label: "Inform",
     href: "/inform",
     children: [
-      { label: "News", href: "/inform/news" },
-      { label: "Newsletters", href: "/inform/newsletters" },
+      { label: "Spotlight", href: "/inform/spotlight" },
       { label: "Events", href: "/inform/events" },
+      { label: "WUCWO", href: "/inform/wucwo" },
+      { label: "Diocesan Conferences 26", href: "/inform/diocesan-conferences-26" },
+      { label: "Communiques", href: "/inform/communiques" },
+      { label: "Health and Safety", href: "/inform/health-and-safety" },
+      { label: "Structure", href: "/inform/structure" },
     ],
   },
   {
     label: "About",
     href: "/about",
     children: [
-      { label: "Who We Are", href: "/about/who-we-are" },
-      { label: "Our History", href: "/about/history" },
-      { label: "Leadership", href: "/about/leadership" },
+      { label: "History", href: "/about/history" },
+      { label: "Annual Report", href: "/about/annual-report" },
+      { label: "Meet our Board", href: "/about/meet-our-board" },
     ],
   },
   {
     label: "Missions",
     href: "/missions",
     children: [
-      { label: "Our Work", href: "/missions/our-work" },
-      { label: "Get Involved", href: "/missions/get-involved" },
+      { label: "Communities", href: "/missions/communities" },
     ],
   },
   { label: "Contact Us", href: "/contact" },
