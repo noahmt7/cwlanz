@@ -77,8 +77,8 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Catholic Women's League emblem"
-            width={72}
-            height={72}
+            width={64}
+            height={64}
             className={styles.logo}
             priority
           />
@@ -86,6 +86,10 @@ export default function Navbar() {
             Catholic Women&rsquo;s League
             <span className={styles.subtitle}>Aotearoa New Zealand</span>
           </span>
+        </Link>
+
+        <Link href="/join" className={`btn btnGold ${styles.brandCta}`}>
+          Become a Member
         </Link>
       </div>
 

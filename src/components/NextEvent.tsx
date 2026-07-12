@@ -39,7 +39,12 @@ export default function NextEvent() {
   return (
     <section className={styles.section} aria-labelledby="next-event-heading">
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>Next Event</p>
+        <div className={styles.sectionHead}>
+          <p className={styles.eyebrow}>Next Event</p>
+          <Link href="/calendar" className={styles.calendarLink}>
+            View full calendar <span aria-hidden>&rarr;</span>
+          </Link>
+        </div>
 
         <div className={styles.card}>
           <div className={styles.dateBadge} aria-hidden>
@@ -65,7 +70,7 @@ export default function NextEvent() {
             <p className={styles.description}>{description}</p>
           </div>
 
-          <Link href={href} className={styles.cta}>
+          <Link href={href} className="btn btnNavy">
             Learn more
           </Link>
         </div>

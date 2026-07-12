@@ -1,6 +1,7 @@
 .section {
-  padding: 3.5rem 1.5rem;
-  background: #f7f8fc;
+  padding: 4.5rem 1.5rem;
+  background: var(--cwl-cream);
+  border-top: 1px solid var(--cwl-line);
   border-bottom: 1px solid var(--cwl-line);
 }
 
@@ -9,50 +10,90 @@
   margin: 0 auto;
 }
 
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
 .eyebrow {
-  font-size: 0.8rem;
+  position: relative;
+  padding-left: 2.4rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--cwl-gold);
-  margin-bottom: 1rem;
+  color: var(--cwl-gold-deep);
+}
+
+/* Short gold rule before the eyebrow */
+.eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1.7rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--cwl-gold);
+}
+
+.calendarLink {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cwl-navy);
+  transition: color 0.15s ease;
+}
+
+.calendarLink:hover {
+  color: var(--cwl-gold-deep);
 }
 
 .card {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 2rem;
   background: #fff;
   border: 1px solid var(--cwl-line);
-  border-radius: 14px;
-  padding: 1.75rem 2rem;
-  box-shadow: 0 10px 30px rgba(19, 31, 82, 0.06);
+  border-radius: var(--cwl-r-lg);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--cwl-shadow-sm);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.card:hover {
+  box-shadow: var(--cwl-shadow-md);
+  transform: translateY(-3px);
 }
 
 .dateBadge {
   flex: 0 0 auto;
-  width: 84px;
-  height: 84px;
+  width: 92px;
+  height: 92px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  background: var(--cwl-navy);
+  border-radius: var(--cwl-r-md);
+  background: linear-gradient(160deg, var(--cwl-navy), var(--cwl-navy-deep));
   color: #fff;
   line-height: 1;
+  box-shadow: 0 8px 20px rgba(27, 42, 107, 0.25);
 }
 
 .day {
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 
 .month {
-  margin-top: 0.25rem;
-  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--cwl-gold-light);
 }
@@ -63,10 +104,8 @@
 }
 
 .title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--cwl-navy);
-  margin-bottom: 0.4rem;
+  font-size: 1.65rem;
+  margin-bottom: 0.5rem;
 }
 
 .meta {
@@ -77,8 +116,8 @@
 }
 
 .dot {
-  margin: 0 0.5rem;
-  color: var(--cwl-muted);
+  margin: 0 0.55rem;
+  color: var(--cwl-gold);
 }
 
 .description {
@@ -87,33 +126,18 @@
   max-width: 60ch;
 }
 
-.cta {
-  flex: 0 0 auto;
-  align-self: center;
-  display: inline-block;
-  padding: 0.7rem 1.4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: #fff;
-  background: var(--cwl-navy);
-  border-radius: 8px;
-  transition: background 0.15s ease;
-}
-
-.cta:hover {
-  background: var(--cwl-navy-dark);
-}
-
 @media (max-width: 720px) {
+  .section {
+    padding: 3rem 1.25rem;
+  }
+  .sectionHead {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
   .card {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.5rem;
-  }
-  .cta {
-    align-self: stretch;
-    text-align: center;
+    gap: 1.5rem;
+    padding: 1.75rem 1.5rem;
   }
 }

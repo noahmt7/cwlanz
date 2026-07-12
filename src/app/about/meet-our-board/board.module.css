@@ -1,7 +1,7 @@
 .sections {
   display: flex;
   flex-direction: column;
-  gap: 2.75rem;
+  gap: 3.5rem;
   max-width: none;
 }
 
@@ -10,19 +10,26 @@
 }
 
 .sectionHeading {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--cwl-navy);
-  padding-bottom: 0.6rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--cwl-gold);
+  font-size: 1.7rem;
+  margin-bottom: 1.75rem;
+}
+
+/* Short gold rule under each section heading */
+.sectionHeading::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-top: 0.7rem;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--cwl-gold), var(--cwl-gold-light));
 }
 
 .grid {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .card {
@@ -33,28 +40,42 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: 12px;
+  border-radius: var(--cwl-r-md);
   overflow: hidden;
   background: #eef0f7;
-  box-shadow: 0 6px 18px rgba(19, 31, 82, 0.1);
+  border: 1px solid var(--cwl-line);
+  box-shadow: var(--cwl-shadow-sm);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card:hover .photoWrap {
+  transform: translateY(-5px);
+  box-shadow: var(--cwl-shadow-md);
 }
 
 .photo {
   object-fit: cover;
   object-position: center top;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .photo {
+  transform: scale(1.03);
 }
 
 .name {
-  margin-top: 0.85rem;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--cwl-ink);
+  margin-top: 1rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cwl-navy);
 }
 
 .role {
-  font-size: 0.9rem;
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
   color: var(--cwl-muted);
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 @media (max-width: 900px) {
@@ -64,6 +85,9 @@
 }
 
 @media (max-width: 600px) {
+  .sections {
+    gap: 2.5rem;
+  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;

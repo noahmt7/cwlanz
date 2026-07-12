@@ -3,24 +3,35 @@
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 0.55rem 1.25rem;
-  background: #fdf3d7;
-  border-bottom: 1px solid #efd98a;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(180deg, #fdf6df, #faf0cf);
+  border-bottom: 1px solid #eddfae;
   color: #6b5310;
   text-align: center;
 }
 
 .dot {
   flex: 0 0 auto;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #d9a406;
-  box-shadow: 0 0 0 3px rgba(217, 164, 6, 0.2);
+  box-shadow: 0 0 0 3px rgba(217, 164, 6, 0.18);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(217, 164, 6, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(217, 164, 6, 0.08);
+  }
 }
 
 .text {
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   line-height: 1.4;
   margin: 0;
 }
@@ -31,7 +42,7 @@
 
 @media (max-width: 520px) {
   .text {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
   }
   .dot {
     display: none;
