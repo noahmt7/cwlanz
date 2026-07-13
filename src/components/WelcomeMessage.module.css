@@ -1,0 +1,70 @@
+.wrap {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--cwl-ink);
+}
+
+.wrap p {
+  margin-bottom: 1.2rem;
+}
+
+/* Portrait floats top-right, text wraps alongside it */
+.portrait {
+  float: right;
+  width: 170px;
+  margin: 0.2rem 0 1.2rem 1.75rem;
+  text-align: center;
+}
+
+.portraitImg {
+  width: 170px;
+  height: auto;
+  border-radius: var(--cwl-r-md);
+  border: 3px solid #fff;
+  box-shadow: var(--cwl-shadow-md);
+  object-fit: cover;
+}
+
+.portraitCaption {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cwl-ink);
+}
+
+.portraitCaption span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--cwl-muted);
+  margin-top: 0.1rem;
+}
+
+.mihi {
+  font-style: italic;
+  color: var(--cwl-navy);
+}
+
+.signoff {
+  margin-top: 1.75rem;
+}
+
+.signname {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--cwl-navy);
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    font-size: 1rem;
+  }
+  .portrait {
+    float: none;
+    width: 160px;
+    margin: 0 auto 1.5rem;
+  }
+  .portraitImg {
+    width: 160px;
+  }
+}

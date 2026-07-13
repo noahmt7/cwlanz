@@ -1,0 +1,96 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.poster {
+  margin: 0;
+  text-align: center;
+}
+
+.posterImg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--cwl-r-md);
+  box-shadow: var(--cwl-shadow-md);
+  object-fit: cover;
+}
+
+.posterCaption {
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cwl-navy);
+  line-height: 1.4;
+}
+
+.posterCaption span {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--cwl-muted);
+  margin-top: 0.15rem;
+}
+
+.body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--cwl-ink);
+}
+
+.body p {
+  margin-bottom: 1.2rem;
+}
+
+.attribution {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cwl-gold-deep);
+  margin-bottom: 1rem !important;
+}
+
+.scripture {
+  margin: 1.75rem 0;
+  padding: 1.2rem 1.5rem;
+  border-left: 3px solid var(--cwl-gold);
+  background: var(--cwl-gold-pale);
+  border-radius: 0 var(--cwl-r-sm) var(--cwl-r-sm) 0;
+  color: var(--cwl-navy);
+  font-style: italic;
+}
+
+.scripture p {
+  margin-bottom: 0.7rem;
+}
+
+.scripture cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--cwl-gold-deep);
+}
+
+.prayer {
+  font-style: italic;
+  color: var(--cwl-navy);
+}
+
+@media (max-width: 760px) {
+  .wrap {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .poster {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .body {
+    font-size: 1rem;
+  }
+}

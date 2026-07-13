@@ -1,0 +1,141 @@
+.doc {
+  max-width: 76ch;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--cwl-ink);
+}
+
+.doc p {
+  margin-bottom: 1.2rem;
+}
+
+.doc em {
+  color: var(--cwl-muted);
+}
+
+/* Header */
+.docHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--cwl-line);
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.docTitle {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--cwl-navy);
+  line-height: 1.1;
+}
+
+.docSubtitle {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--cwl-muted);
+  font-size: 1rem;
+}
+
+.docDate {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cwl-gold-deep);
+}
+
+/* Question headings */
+.question {
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+  color: var(--cwl-navy);
+  margin: 2.5rem 0 1.1rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--cwl-gold);
+}
+
+.subhead {
+  font-size: 1.15rem;
+  color: var(--cwl-navy);
+  margin-bottom: 0.6rem;
+}
+
+/* Quotes */
+.quote {
+  margin: 0 0 1.2rem;
+  padding: 1rem 1.4rem;
+  border-left: 3px solid var(--cwl-gold);
+  background: var(--cwl-gold-pale);
+  border-radius: 0 var(--cwl-r-sm) var(--cwl-r-sm) 0;
+  color: var(--cwl-navy);
+  font-style: italic;
+}
+
+.quote p {
+  margin-bottom: 0;
+}
+
+.pull {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--cwl-navy);
+  text-align: center;
+  margin: 2rem 0 !important;
+}
+
+/* Sign-off */
+.signoff {
+  margin-top: 2rem !important;
+  margin-bottom: 0 !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--cwl-navy);
+}
+
+.role {
+  font-size: 0.9rem;
+  color: var(--cwl-muted);
+}
+
+/* Info box */
+.infoBox {
+  margin-top: 2.5rem;
+  padding: 1.75rem 1.9rem;
+  background: #fff;
+  border: 1px solid var(--cwl-line);
+  border-radius: var(--cwl-r-md);
+  box-shadow: var(--cwl-shadow-sm);
+}
+
+.infoTitle {
+  font-size: 1.05rem;
+  color: var(--cwl-navy);
+  margin-bottom: 0.9rem;
+}
+
+.infoList {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.infoList li {
+  padding: 0.25rem 0;
+}
+
+@media (max-width: 640px) {
+  .doc {
+    font-size: 1rem;
+  }
+  .docHeader {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
