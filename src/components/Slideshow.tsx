@@ -11,8 +11,11 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   { src: "/images/slide-1.png", alt: "Faith and Service — Catholic Women's League Aotearoa New Zealand" },
-  // Add more slides here as they become available:
-  // { src: "/images/slide-2.jpg", alt: "..." },
+  { src: "/images/slide-2.jpg", alt: "Two members admiring a carved stone sculpture in a sunlit rose garden" },
+  { src: "/images/slide-3.jpg", alt: "Members wearing blue ceremonial stoles beside a religious statue in a garden" },
+  { src: "/images/slide-4.jpg", alt: "A group of members with gardening gloves gathered under a tree on a community planting day" },
+  { src: "/images/slide-5.jpg", alt: "Members walking a garden path lined with vivid orange azaleas in bloom" },
+  { src: "/images/slide-6.jpg", alt: "A large gathering of members at the Bluff signpost on the Southland coast" },
 ];
 
 const INTERVAL_MS = 5000;

@@ -53,6 +53,8 @@ const NAV_ITEMS: NavItem[] = [
     href: "/missions",
     children: [
       { label: "Communities", href: "/missions/communities" },
+      { label: "Special Funds", href: "/missions/special-funds" },
+      { label: "Annual Appeal", href: "/missions/annual-appeal" },
     ],
   },
   {

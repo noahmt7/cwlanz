@@ -27,8 +27,8 @@ const SECTIONS: Section[] = [
     heading: "Diocesan Presidents",
     members: [
       { name: "Fleur", role: "Auckland", image: "/images/board/fleur.png" },
-      { name: "Kris", role: "Hamilton", image: "/images/board/kris.png" },
-      { name: "Janette", role: "Wellington", image: "/images/board/janette.png" },
+      { name: "Janette", role: "Hamilton", image: "/images/board/kris.png" },
+      { name: "Kris", role: "Wellington", image: "/images/board/janette.png" },
       { name: "Lynn", role: "Christchurch", image: "/images/board/lynn.png" },
     ],
   },

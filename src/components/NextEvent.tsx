@@ -11,12 +11,12 @@ type EventInfo = {
 
 // Update these details as events are scheduled.
 const NEXT_EVENT: EventInfo = {
-  title: "National Conference 2026",
-  date: new Date("2026-09-19T10:00:00+12:00"),
-  location: "Wellington, New Zealand",
+  title: "Australian State Conference",
+  date: new Date("2026-09-01T09:00:00+12:00"),
+  location: "Brisbane, Australia",
   description:
-    "Join members from across Aotearoa for a day of fellowship, prayer, and shared purpose as we come together in faith and service.",
-  href: "/inform/events",
+    "Join members for three days of fellowship, prayer, and shared purpose as we come together in faith and service, 1–3 September.",
+  href: "/calendar",
 };
 
 const DAY = new Intl.DateTimeFormat("en-NZ", { day: "numeric" });

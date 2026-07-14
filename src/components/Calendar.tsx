@@ -9,11 +9,6 @@ const MONTH_YEAR = new Intl.DateTimeFormat("en-NZ", {
   month: "long",
   year: "numeric",
 });
-const TIME = new Intl.DateTimeFormat("en-NZ", {
-  hour: "numeric",
-  minute: "2-digit",
-  hour12: true,
-});
 
 type Cell = { date: Date; inMonth: boolean };
 
@@ -40,10 +35,17 @@ export default function Calendar() {
   const eventsByDay = useMemo(() => {
     const map = new Map<string, CwlEvent[]>();
     for (const ev of EVENTS) {
-      const key = dateKey(new Date(ev.date));
-      const list = map.get(key) ?? [];
-      list.push(ev);
-      map.set(key, list);
+      const start = new Date(ev.date);
+      const end = ev.endDate ? new Date(ev.endDate) : start;
+      const cursor = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+      const last = new Date(end.getFullYear(), end.getMonth(), end.getDate());
+      while (cursor <= last) {
+        const key = dateKey(cursor);
+        const list = map.get(key) ?? [];
+        list.push(ev);
+        map.set(key, list);
+        cursor.setDate(cursor.getDate() + 1);
+      }
     }
     return map;
   }, []);
@@ -148,12 +150,15 @@ export default function Calendar() {
               <li key={i} className={styles.agendaItem}>
                 <span className={styles.agendaDate}>
                   {d.toLocaleDateString("en-NZ", { day: "numeric", month: "short" })}
+                  {ev.endDate &&
+                    ` – ${new Date(ev.endDate).toLocaleDateString("en-NZ", {
+                      day: "numeric",
+                      month: "short",
+                    })}`}
                 </span>
                 <span className={styles.agendaBody}>
                   <span className={styles.agendaTitle}>{ev.title}</span>
-                  <span className={styles.agendaMeta}>
-                    {TIME.format(d)} &middot; {ev.location}
-                  </span>
+                  <span className={styles.agendaMeta}>{ev.location}</span>
                 </span>
               </li>
             ))}
