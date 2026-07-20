@@ -45,13 +45,24 @@
   margin-bottom: 1.2rem;
 }
 
+.head {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  color: var(--cwl-navy);
+}
+
 .attribution {
+  margin: 0.5rem 0 0 !important;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cwl-gold-deep);
-  margin-bottom: 1rem !important;
 }
 
 .scripture {
@@ -92,5 +103,8 @@
   }
   .body {
     font-size: 1rem;
+  }
+  .title {
+    font-size: 1.6rem;
   }
 }

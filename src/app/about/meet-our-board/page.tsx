@@ -39,6 +39,7 @@ const SECTIONS: Section[] = [
       { name: "Bonnie", role: "National Social Issues Convenor", image: "/images/board/bonnie.png" },
       { name: "Lorraine", role: "National Missions Secretary", image: "/images/board/lorraine.png" },
       { name: "Liz", role: "International WUCWO Secretary", image: "/images/board/liz.png" },
+      { name: "Dr Colleen McMurchy", role: "Tikanga Māori Adviser", image: "/images/board/colleen-mcmurchy.png" },
     ],
   },
 ];

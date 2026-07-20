@@ -19,9 +19,12 @@ export default function SpotlightMatariki() {
       </figure>
 
       <div className={styles.body}>
-        <p className={styles.attribution}>
-          Shared by the New Zealand Catholic Bishops Conference
-        </p>
+        <header className={styles.head}>
+          <h2 className={styles.title}>Matariki</h2>
+          <p className={styles.attribution}>
+            Shared by the New Zealand Catholic Bishops Conference
+          </p>
+        </header>
 
         <p>
           Matariki is a cluster of many stars. This cluster of stars signifies a
