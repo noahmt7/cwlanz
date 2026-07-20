@@ -1,0 +1,78 @@
+/* ---- Video ---- */
+
+.video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--cwl-line);
+  border-radius: var(--cwl-r-md);
+  box-shadow: var(--cwl-shadow-sm);
+  overflow: hidden;
+}
+
+.video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---- Member story ---- */
+
+.story {
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--cwl-line);
+}
+
+.storyHeading {
+  font-size: 1.7rem;
+  color: var(--cwl-navy);
+  margin-bottom: 1.5rem;
+}
+
+.storyHeading::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-top: 0.7rem;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--cwl-gold), var(--cwl-gold-light));
+}
+
+.para {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--cwl-muted);
+  max-width: 68ch;
+}
+
+.para + .para {
+  margin-top: 1rem;
+}
+
+.attribution {
+  display: block;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--cwl-line);
+  max-width: 68ch;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: var(--cwl-muted);
+}
+
+.attributionName {
+  display: block;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--cwl-navy);
+}
+
+@media (max-width: 720px) {
+  .story {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+}

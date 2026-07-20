@@ -1,0 +1,62 @@
+.wrap {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--cwl-ink);
+}
+
+.intro {
+  max-width: 70ch;
+  margin-bottom: 2.75rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.photo {
+  margin: 0;
+}
+
+.photoImg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--cwl-r-md);
+  box-shadow: var(--cwl-shadow-md);
+}
+
+.caption {
+  margin-top: 0.8rem;
+}
+
+.diocese {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cwl-gold-deep);
+}
+
+.venue {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cwl-navy);
+  margin-top: 0.15rem;
+}
+
+.note {
+  font-size: 0.92rem;
+  color: var(--cwl-muted);
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 820px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .wrap {
+    font-size: 1rem;
+  }
+}
