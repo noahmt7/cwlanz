@@ -1,0 +1,150 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 70ch) 260px;
+  justify-content: space-between;
+  align-items: start;
+  gap: 3.5rem;
+}
+
+/* ---- Logo and booklet cover ---- */
+
+.media {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: block;
+  width: 130px;
+  height: auto;
+  border-radius: var(--cwl-r-md);
+}
+
+.cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--cwl-r-md);
+  box-shadow: var(--cwl-shadow-sm);
+}
+
+/* ---- Article ---- */
+
+.article {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.heading {
+  font-size: 1.7rem;
+  color: var(--cwl-navy);
+  margin-bottom: 1.5rem;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-top: 0.7rem;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--cwl-gold), var(--cwl-gold-light));
+}
+
+.section + .section {
+  margin-top: 2.25rem;
+}
+
+.subheading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--cwl-navy);
+  margin-bottom: 0.6rem;
+}
+
+.para {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--cwl-muted);
+}
+
+.para + .para {
+  margin-top: 1rem;
+}
+
+.list {
+  list-style: disc;
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--cwl-muted);
+}
+
+.list li + li {
+  margin-top: 0.35rem;
+}
+
+/* ---- Disclaimer and contact details ---- */
+
+.footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cwl-line);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--cwl-muted);
+}
+
+.contact {
+  margin-top: 1.5rem;
+}
+
+.contact strong {
+  color: var(--cwl-navy);
+}
+
+.contact a {
+  color: var(--cwl-gold-deep);
+  text-decoration: underline;
+}
+
+.contactIntro {
+  margin-bottom: 0.4rem;
+}
+
+.copyright {
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .media {
+    grid-column: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 96px;
+  }
+
+  .cover {
+    width: 150px;
+  }
+
+  .article {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
