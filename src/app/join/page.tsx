@@ -36,7 +36,7 @@ const BADGE_YEARS = ["10", "25", "40", "50", "60"];
 
 export default function Page() {
   return (
-    <PageShell eyebrow="Quick Links" title="Join" wide>
+    <PageShell eyebrow="Membership" title="Join" wide>
       <p className={styles.intro}>
         Membership offers the opportunity to be part of a community of women
         united in faith and service across Aotearoa New Zealand.

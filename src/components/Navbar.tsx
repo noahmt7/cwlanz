@@ -47,6 +47,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "History", href: "/about/history" },
       { label: "Annual Report", href: "/about/annual-report" },
       { label: "Meet our Board", href: "/about/meet-our-board" },
+      { label: "Membership", href: "/join" },
     ],
   },
   {
