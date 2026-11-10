@@ -6,30 +6,6 @@ const SLIDE_HEIGHT = 1414;
 
 const SLIDES = [
   {
-    src: "/images/special-funds/slide-7.jpg",
-    alt: "The CWL Hymn, sung to How Great Thou Art, with two verses and the refrain",
-  },
-  {
-    src: "/images/special-funds/slide-8.jpg",
-    alt: "Liturgy for our beloved deceased, with a prayer for departed League members, a sung Eternal Rest refrain, a rose, a candle and the CWL logo",
-  },
-  {
-    src: "/images/special-funds/slide-9.jpg",
-    alt: "Prayer for the deceased, which League members may pray at the funeral or vigil of a fellow member",
-  },
-  {
-    src: "/images/special-funds/slide-10.jpg",
-    alt: "The Catholic Women’s League prayer, asking the Holy Spirit to guide the League’s prayer and work",
-  },
-  {
-    src: "/images/special-funds/slide-11.jpg",
-    alt: "Updates on the Papal Synod — the Synod 2021 to 2023 logo, For a Synodal Church, beside Pope Francis cupping a hand to his ear to listen",
-  },
-  {
-    src: "/images/special-funds/slide-12.jpg",
-    alt: "World Union of Catholic Women’s Organisations — its history with CWLANZ since 1948, the meaning of its logo, affiliated regions, and International Secretary Liz Roche with her contact email",
-  },
-  {
     src: "/images/special-funds/slide-13.jpg",
     alt: "Mission in the Pacific — how CWL supports mission communities, a map of Nauru, Kiribati, Tuvalu, Solomon Islands, Samoa, Fiji, Vanuatu and Tonga, and National Mission Secretary Joan Lawn with her contact email",
   },

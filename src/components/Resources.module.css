@@ -76,6 +76,12 @@
   box-shadow: var(--cwl-shadow-md);
 }
 
+.slides {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
 .article {
   min-width: 0;
   font-size: 1.05rem;
