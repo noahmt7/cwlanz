@@ -6,8 +6,9 @@ const SLIDE_HEIGHT = 1414;
 
 const SLIDES = [
   {
-    src: "/images/special-funds/slide-13.jpg",
-    alt: "Mission in the Pacific — how CWL supports mission communities, a map of Nauru, Kiribati, Tuvalu, Solomon Islands, Samoa, Fiji, Vanuatu and Tonga, and National Mission Secretary Joan Lawn with her contact email",
+    src: "/images/special-funds/mission-in-the-pacific-2.jpg",
+    alt: "Mission in the Pacific — how CWL supports mission communities, a map of Nauru, Kiribati, Tuvalu, Solomon Islands, Samoa, Fiji, Vanuatu and Tonga, and National Mission Secretary Lorraine Macmillan with her contact email",
+    height: 1125,
   },
   {
     src: "/images/special-funds/slide-14.jpg",
@@ -48,7 +49,7 @@ export default function SpecialFundsSlides() {
           src={slide.src}
           alt={slide.alt}
           width={SLIDE_WIDTH}
-          height={SLIDE_HEIGHT}
+          height={slide.height ?? SLIDE_HEIGHT}
           sizes="(max-width: 1040px) 100vw, 1000px"
           className={styles.slide}
         />
