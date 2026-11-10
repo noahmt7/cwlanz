@@ -1,0 +1,276 @@
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.jump a {
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--cwl-gold-light);
+  border-radius: 999px;
+  background: var(--cwl-gold-pale);
+  color: var(--cwl-navy);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.wrap {
+  max-width: 62rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--cwl-line);
+  scroll-margin-top: 6rem;
+}
+
+.head {
+  margin-bottom: 1.75rem;
+}
+
+.walkHead {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.walkHeadImg {
+  flex: none;
+  width: 130px;
+  height: auto;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  color: var(--cwl-navy);
+}
+
+.byline {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cwl-gold-deep);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: start;
+  gap: 3rem;
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mediaImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--cwl-r-md);
+  box-shadow: var(--cwl-shadow-md);
+}
+
+.article {
+  min-width: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--cwl-ink);
+}
+
+.prose {
+  max-width: 46rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--cwl-ink);
+}
+
+.section + .section {
+  margin-top: 2.25rem;
+}
+
+/* Keeps floated photos inside their own section */
+.section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.subheading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--cwl-navy);
+  margin-bottom: 0.6rem;
+}
+
+.article p + p,
+.prose p + p {
+  margin-top: 1rem;
+}
+
+.rubric {
+  font-weight: 600;
+  color: var(--cwl-navy);
+}
+
+.note {
+  font-style: italic;
+  color: var(--cwl-muted);
+}
+
+.quote {
+  margin: 1rem 0 0;
+  padding: 1.1rem 1.4rem;
+  border-left: 3px solid var(--cwl-gold);
+  border-radius: 0 var(--cwl-r-sm) var(--cwl-r-sm) 0;
+  background: var(--cwl-gold-pale);
+}
+
+.attribution {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--cwl-muted);
+}
+
+.verse span {
+  display: block;
+}
+
+.intercessions {
+  list-style: decimal;
+  padding-left: 1.4rem;
+}
+
+.intercessions li + li {
+  margin-top: 0.75rem;
+}
+
+.response {
+  display: block;
+  font-style: italic;
+  color: var(--cwl-gold-deep);
+}
+
+/* The source photos are small with soft white edges, so they stay near actual size. */
+.float {
+  float: right;
+  height: auto;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.walkMain {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.forest {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prompts li {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--cwl-gold-pale);
+  color: var(--cwl-navy);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.questions {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+  color: var(--cwl-navy);
+}
+
+.questions li + li {
+  margin-top: 0.5rem;
+}
+
+.smallPhotos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.list li + li {
+  margin-top: 0.35rem;
+}
+
+.credit {
+  margin-top: 2.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--cwl-line);
+  font-size: 0.85rem;
+  color: var(--cwl-muted);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .media {
+    width: 100%;
+    max-width: 340px;
+    margin-inline: auto;
+  }
+
+  .walkMain {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .forest {
+    max-width: 300px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .article,
+  .prose {
+    font-size: 1rem;
+  }
+
+  .walkHeadImg {
+    width: 96px;
+  }
+
+  .float {
+    max-width: 40%;
+    margin-left: 1rem;
+  }
+}

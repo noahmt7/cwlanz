@@ -5,6 +5,8 @@ export type CwlEvent = {
   /** ISO date-time string for the final day of a multi-day event (optional) */
   endDate?: string;
   location: string;
+  /** Programme notes, one per line, shown under the event in the agenda (optional) */
+  details?: string[];
 };
 
 // Add or edit upcoming events here. They flow through to the calendar.
@@ -16,10 +18,15 @@ export const EVENTS: CwlEvent[] = [
     location: "Brisbane",
   },
   {
-    title: "NZ National Conference",
+    title: "CWLANZ National Conference",
     date: "2027-07-13T09:00:00+12:00",
-    endDate: "2027-07-14T09:00:00+12:00",
-    location: "Christchurch",
+    endDate: "2027-07-15T09:00:00+12:00",
+    location: "The Elms Hotel, Papanui Road, Christchurch",
+    details: [
+      "Mini Whakatau: Tuesday 13 July, 5pm, Pro Cathedral, Manchester St",
+      "Conference Mass: Tuesday 13 July, 5.30pm, Pro Cathedral, Manchester St, Bishop Michael presiding",
+      "Supper and ‘meet and greet’ in the Narthex to follow Mass",
+    ],
   },
 ];
 

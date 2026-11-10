@@ -159,6 +159,13 @@ export default function Calendar() {
                 <span className={styles.agendaBody}>
                   <span className={styles.agendaTitle}>{ev.title}</span>
                   <span className={styles.agendaMeta}>{ev.location}</span>
+                  {ev.details && (
+                    <ul className={styles.agendaDetails}>
+                      {ev.details.map((line, j) => (
+                        <li key={j}>{line}</li>
+                      ))}
+                    </ul>
+                  )}
                 </span>
               </li>
             ))}

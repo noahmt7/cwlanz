@@ -36,6 +36,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "WUCWO", href: "/inform/wucwo" },
       { label: "Diocesan Conferences 26", href: "/inform/diocesan-conferences-26" },
       { label: "Communiques", href: "/inform/communiques" },
+      { label: "Latest Newsletters", href: "/inform/newsletters" },
       { label: "Health and Safety", href: "/inform/health-and-safety" },
       { label: "Structure", href: "/inform/structure" },
     ],

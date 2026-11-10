@@ -11,26 +11,35 @@ type EventInfo = {
 
 // Update these details as events are scheduled.
 const NEXT_EVENT: EventInfo = {
-  title: "Australian State Conference",
-  date: new Date("2026-09-01T09:00:00+12:00"),
-  location: "Brisbane, Australia",
+  title: "CWLANZ National Conference",
+  date: new Date("2027-07-13T17:00:00+12:00"),
+  location: "The Elms Hotel, Christchurch",
   description:
-    "Join members for three days of fellowship, prayer, and shared purpose as we come together in faith and service, 1–3 September.",
+    "Join members for three days of fellowship, prayer, and shared purpose, 13–15 July, opening with the Mini Whakatau and Conference Mass at the Pro Cathedral.",
   href: "/calendar",
 };
 
-const DAY = new Intl.DateTimeFormat("en-NZ", { day: "numeric" });
-const MONTH = new Intl.DateTimeFormat("en-NZ", { month: "short" });
+const TIME_ZONE = "Pacific/Auckland";
+const DAY = new Intl.DateTimeFormat("en-NZ", {
+  day: "numeric",
+  timeZone: TIME_ZONE,
+});
+const MONTH = new Intl.DateTimeFormat("en-NZ", {
+  month: "short",
+  timeZone: TIME_ZONE,
+});
 const FULL = new Intl.DateTimeFormat("en-NZ", {
   weekday: "long",
   day: "numeric",
   month: "long",
   year: "numeric",
+  timeZone: TIME_ZONE,
 });
 const TIME = new Intl.DateTimeFormat("en-NZ", {
   hour: "numeric",
   minute: "2-digit",
   hour12: true,
+  timeZone: TIME_ZONE,
 });
 
 export default function NextEvent() {

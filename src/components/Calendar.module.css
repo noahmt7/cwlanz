@@ -221,6 +221,17 @@
   color: var(--cwl-muted);
 }
 
+.agendaDetails {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--cwl-ink);
+}
+
 @media (max-width: 860px) {
   .wrap {
     grid-template-columns: 1fr;
